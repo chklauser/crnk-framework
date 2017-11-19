@@ -91,6 +91,7 @@ public class DefaultInformationBuilder implements InformationBuilder {
 
 		private RepositoryMethodAccess access = new RepositoryMethodAccess(true, true, true, true);
 
+		@Override
 		public DefaultResource resource() {
 			return resource;
 		}

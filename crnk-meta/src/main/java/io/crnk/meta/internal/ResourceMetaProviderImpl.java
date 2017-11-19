@@ -236,8 +236,8 @@ public class ResourceMetaProviderImpl extends MetaProviderBase {
 
 		MetaResourceRepository meta = new MetaResourceRepository();
 		meta.setResourceType(metaResource);
-		meta.setName(metaResource.getName() + "$Repository");
-		meta.setId(metaResource.getId() + "$Repository");
+		meta.setName(repositoryInformation.getResourceType() + "$Repository");
+		meta.setId(repositoryInformation.getResourceType() + "$Repository");
 
 		for (RepositoryAction action : repositoryInformation.getActions().values()) {
 			MetaResourceAction metaAction = new MetaResourceAction();

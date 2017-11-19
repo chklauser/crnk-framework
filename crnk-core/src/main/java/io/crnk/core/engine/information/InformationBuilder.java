@@ -4,6 +4,7 @@ import io.crnk.core.engine.information.repository.RelationshipRepositoryInformat
 import io.crnk.core.engine.information.repository.RepositoryMethodAccess;
 import io.crnk.core.engine.information.repository.ResourceRepositoryInformation;
 import io.crnk.core.engine.information.resource.*;
+import io.crnk.core.engine.internal.information.DefaultInformationBuilder;
 import io.crnk.core.resource.annotations.LookupIncludeBehavior;
 import io.crnk.core.resource.annotations.SerializeType;
 
@@ -22,6 +23,8 @@ public interface InformationBuilder {
 	}
 
 	interface ResourceRepository {
+
+		DefaultInformationBuilder.DefaultResource resource();
 
 		void setAccess(RepositoryMethodAccess access);
 
